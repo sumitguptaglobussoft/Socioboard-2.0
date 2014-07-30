@@ -1,0 +1,1048 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09C0D321-7AFA-4EB3-8423-3FAE7D4DA720}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Socioboard</RootNamespace>
+    <AssemblyName>Socioboard</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="App_Start\CustomViewLocationRazorViewEngine.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="favicon.ico" />
+    <Content Include="Themes\Socialscoup\Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Account\Login.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Account\Manage.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Account\Register.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Home\About.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Home\Contact.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Home\Index.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Shared\_Layout.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Shared\Error.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\_ViewStart.cshtml" />
+    <Content Include="Themes\Socialscoup\Views\Web.config" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Themes\Socioboard\Content\css\admin.css" />
+    <Content Include="Themes\Socioboard\Content\css\alertify.core.css" />
+    <Content Include="Themes\Socioboard\Content\css\alertify.default.css" />
+    <Content Include="Themes\Socioboard\Content\css\bootstrap-combined.min.css" />
+    <Content Include="Themes\Socioboard\Content\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="Themes\Socioboard\Content\css\bootstrap-responsive.min.css" />
+    <Content Include="Themes\Socioboard\Content\css\bootstrap.min.css" />
+    <Content Include="Themes\Socioboard\Content\css\font-awesome-ie7.min.css" />
+    <Content Include="Themes\Socioboard\Content\css\font-awesome.min.css" />
+    <Content Include="Themes\Socioboard\Content\css\fonts.css" />
+    <Content Include="Themes\Socioboard\Content\css\index.css" />
+    <Content Include="Themes\Socioboard\Content\css\jquery.lightbox-0.5.css" />
+    <Content Include="Themes\Socioboard\Content\css\jquery.mCustomScrollbar.css" />
+    <Content Include="Themes\Socioboard\Content\css\MasterStyle.css" />
+    <Content Include="Themes\Socioboard\Content\css\slider.css" />
+    <Content Include="Themes\Socioboard\Content\css\socialsuite.css" />
+    <Content Include="Themes\Socioboard\Content\css\ssp-responsive.css" />
+    <Content Include="Themes\Socioboard\Content\css\style-light.css" />
+    <Content Include="Themes\Socioboard\Content\css\style.css" />
+    <Content Include="Themes\Socioboard\Content\css\styles.css" />
+    <Content Include="Themes\Socioboard\Content\css\Style_previous.css" />
+    <Content Include="Themes\Socioboard\Content\img\00031502_normal.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\2.png" />
+    <Content Include="Themes\Socioboard\Content\img\282.gif" />
+    <Content Include="Themes\Socioboard\Content\img\325.gif" />
+    <Content Include="Themes\Socioboard\Content\img\328.gif" />
+    <Content Include="Themes\Socioboard\Content\img\360.gif" />
+    <Content Include="Themes\Socioboard\Content\img\43px_on_transparent.gif" />
+    <Content Include="Themes\Socioboard\Content\img\43px_on_transparent1.gif" />
+    <Content Include="Themes\Socioboard\Content\img\6.png" />
+    <Content Include="Themes\Socioboard\Content\img\891.png" />
+    <Content Include="Themes\Socioboard\Content\img\AddBtn.png" />
+    <Content Include="Themes\Socioboard\Content\img\address.png" />
+    <Content Include="Themes\Socioboard\Content\img\add_btn.png" />
+    <Content Include="Themes\Socioboard\Content\img\add_btn_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\061.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\1.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\10.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\100.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\11.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\111.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\13.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\14.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\15.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\16.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\19.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\1_2.PNG" />
+    <Content Include="Themes\Socioboard\Content\img\admin\2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\20.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\21.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\22.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\23.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\24.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\25.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\26.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\27.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\28.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\29.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\2_2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\3.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\30.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\31.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\32.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\3_2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\4.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\4_2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\5.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\5_2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\6.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\6_2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\7.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\7_2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\8.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\8_2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\9.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\9_2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\add.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\addico.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\addprofile.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\ads.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\ads2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\archivebtn.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\arrow.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\bar-chart.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\bgcontent.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\bgwrap.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\boxes.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\bubbleicon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\bunder14.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\calendar.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\cambtn.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\canvas.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\caret.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\chatbtn.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\cmposecontainer.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\Demo-Image.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\dil.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\discovery.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\dot.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\drop_down.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\emailtiny.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\engagereport.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\envbtn.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\estimateinbound.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\expand.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\expanded.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\facebook.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\fb-female-icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\fb-icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\fb-male-icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\fbicon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\fbicon2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\feeds.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\followersgraph.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\g+btn.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\g+icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\goto.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\goto1.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\graph.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\group.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\groupstats.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\hammertiny.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\heart-empty.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\admin\heart-empty.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\home.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\img.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\instagram.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\inter.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\invite.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\leftarrow.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\linkedinicon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\logo.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\logo1.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\logo4.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\loopback.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\mail.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\markerbtn.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\markerbtn2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\messpic1.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\messpic2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\msgtiny.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\navi.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\navi_menu.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\peoples.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\pinterest.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\pinteresticon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\print.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\publishing.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\remotetiny.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\reports.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\reportstiny.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\responrategraph.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\responrategraph2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\righ-details.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\rsidebarbg.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\searchmini.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\setting.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\slashdot.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\speech-bubble-left.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\star-ribbon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\time.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\todo.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\top-nav.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\tt.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\ttred.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\twitter-female-icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\twitter-icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\twitter-male-icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\twitter-white.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\twitter.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\twittericon-white.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\twittericon.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\twittericon2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\url.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\user.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\user2.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\user3.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\user4.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\user5.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\user6.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\usergrey.png" />
+    <Content Include="Themes\Socioboard\Content\img\admin\usersetting.png" />
+    <Content Include="Themes\Socioboard\Content\img\ajax-loader.gif" />
+    <Content Include="Themes\Socioboard\Content\img\analytics_img.png" />
+    <Content Include="Themes\Socioboard\Content\img\antivirus.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\an_24X24.png" />
+    <Content Include="Themes\Socioboard\Content\img\apple-touch-icon-114-precomposed.png" />
+    <Content Include="Themes\Socioboard\Content\img\apple-touch-icon-144-precomposed.png" />
+    <Content Include="Themes\Socioboard\Content\img\apple-touch-icon-57-precomposed.png" />
+    <Content Include="Themes\Socioboard\Content\img\apple-touch-icon-72-precomposed.png" />
+    <Content Include="Themes\Socioboard\Content\img\archive.png" />
+    <Content Include="Themes\Socioboard\Content\img\arrows.png" />
+    <Content Include="Themes\Socioboard\Content\img\arrow_up.png" />
+    <Content Include="Themes\Socioboard\Content\img\attechphoto.png" />
+    <Content Include="Themes\Socioboard\Content\img\avenue.png" />
+    <Content Include="Themes\Socioboard\Content\img\benefits-bg.png" />
+    <Content Include="Themes\Socioboard\Content\img\benefits.png" />
+    <Content Include="Themes\Socioboard\Content\img\benefits11.png" />
+    <Content Include="Themes\Socioboard\Content\img\benefitss.png" />
+    <Content Include="Themes\Socioboard\Content\img\benefitsss.png" />
+    <Content Include="Themes\Socioboard\Content\img\betaloader.gif" />
+    <Content Include="Themes\Socioboard\Content\img\betaloader1.gif" />
+    <Content Include="Themes\Socioboard\Content\img\blank_img.png" />
+    <Content Include="Themes\Socioboard\Content\img\border-1.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\break.png" />
+    <Content Include="Themes\Socioboard\Content\img\browser.png" />
+    <Content Include="Themes\Socioboard\Content\img\btn_analytics.png" />
+    <Content Include="Themes\Socioboard\Content\img\bubble-big.png" />
+    <Content Include="Themes\Socioboard\Content\img\bubble-testimonial.png" />
+    <Content Include="Themes\Socioboard\Content\img\bullet-1.png" />
+    <Content Include="Themes\Socioboard\Content\img\bunder.png" />
+    <Content Include="Themes\Socioboard\Content\img\bunder2.png" />
+    <Content Include="Themes\Socioboard\Content\img\button-cross.png" />
+    <Content Include="Themes\Socioboard\Content\img\button_img.png" />
+    <Content Include="Themes\Socioboard\Content\img\button_img_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\bx_loader.gif" />
+    <Content Include="Themes\Socioboard\Content\img\check_click.png" />
+    <Content Include="Themes\Socioboard\Content\img\chng_pwd.png" />
+    <Content Include="Themes\Socioboard\Content\img\circle-cover.png" />
+    <Content Include="Themes\Socioboard\Content\img\clock.png" />
+    <Content Include="Themes\Socioboard\Content\img\closewhiteclose.png" />
+    <Content Include="Themes\Socioboard\Content\img\closewicon.png" />
+    <Content Include="Themes\Socioboard\Content\img\clsoegreyclose.png" />
+    <Content Include="Themes\Socioboard\Content\img\content2.gif" />
+    <Content Include="Themes\Socioboard\Content\img\content3.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\content4.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\create_account.png" />
+    <Content Include="Themes\Socioboard\Content\img\curcil.png" />
+    <Content Include="Themes\Socioboard\Content\img\dark.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\dashborad.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\delete.png" />
+    <Content Include="Themes\Socioboard\Content\img\deleteimage.png" />
+    <Content Include="Themes\Socioboard\Content\img\dialog_close.gif" />
+    <Content Include="Themes\Socioboard\Content\img\discovery.png" />
+    <Content Include="Themes\Socioboard\Content\img\dislike.png" />
+    <Content Include="Themes\Socioboard\Content\img\divider.png" />
+    <Content Include="Themes\Socioboard\Content\img\divider2.png" />
+    <Content Include="Themes\Socioboard\Content\img\divider3.png" />
+    <Content Include="Themes\Socioboard\Content\img\dominator.png" />
+    <Content Include="Themes\Socioboard\Content\img\drop_arrow.png" />
+    <Content Include="Themes\Socioboard\Content\img\drop_bottom.png" />
+    <Content Include="Themes\Socioboard\Content\img\drop_mid.png" />
+    <Content Include="Themes\Socioboard\Content\img\drop_top.png" />
+    <Content Include="Themes\Socioboard\Content\img\drop_top_left_point.png" />
+    <Content Include="Themes\Socioboard\Content\img\edit.png" />
+    <Content Include="Themes\Socioboard\Content\img\englishflag.png" />
+    <Content Include="Themes\Socioboard\Content\img\error_bg.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\error_header.gif" />
+    <Content Include="Themes\Socioboard\Content\img\facebook.png" />
+    <Content Include="Themes\Socioboard\Content\img\fancybox-close.png" />
+    <Content Include="Themes\Socioboard\Content\img\favicon.png" />
+    <Content Include="Themes\Socioboard\Content\img\fb_24X24.png" />
+    <Content Include="Themes\Socioboard\Content\img\fb_icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\fb_icon_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\fb_icon_lgn.png" />
+    <Content Include="Themes\Socioboard\Content\img\fb_img.png" />
+    <Content Include="Themes\Socioboard\Content\img\feeds.png" />
+    <Content Include="Themes\Socioboard\Content\img\female-icon.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\flag-eng.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\flag-india.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\flag-uae.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\flag-uk.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\flag-us.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\full_profile.png" />
+    <Content Include="Themes\Socioboard\Content\img\glyphicons-halflings-white.png" />
+    <Content Include="Themes\Socioboard\Content\img\glyphicons-halflings.png" />
+    <Content Include="Themes\Socioboard\Content\img\google_analytics.png" />
+    <Content Include="Themes\Socioboard\Content\img\google_analytics_grey.png" />
+    <Content Include="Themes\Socioboard\Content\img\google_icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\google_icon_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\google_plus.png" />
+    <Content Include="Themes\Socioboard\Content\img\Google_plus_24x24.png" />
+    <Content Include="Themes\Socioboard\Content\img\google_plus_grey.png" />
+    <Content Include="Themes\Socioboard\Content\img\gplus.png" />
+    <Content Include="Themes\Socioboard\Content\img\gplus_48X48.png" />
+    <Content Include="Themes\Socioboard\Content\img\graph.png" />
+    <Content Include="Themes\Socioboard\Content\img\grey.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\greyg+.png" />
+    <Content Include="Themes\Socioboard\Content\img\group-folder-sprite.png" />
+    <Content Include="Themes\Socioboard\Content\img\group-folder-sprite1.png" />
+    <Content Include="Themes\Socioboard\Content\img\group-folder-sprite2.png" />
+    <Content Include="Themes\Socioboard\Content\img\Groups.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\Groups.png" />
+    <Content Include="Themes\Socioboard\Content\img\groups_.png" />
+    <Content Include="Themes\Socioboard\Content\img\heart-broken-small.png" />
+    <Content Include="Themes\Socioboard\Content\img\heart-dark-fill.png" />
+    <Content Include="Themes\Socioboard\Content\img\heart-dark-mask-outline02.png" />
+    <Content Include="Themes\Socioboard\Content\img\hide.png" />
+    <Content Include="Themes\Socioboard\Content\img\hline-white.png" />
+    <Content Include="Themes\Socioboard\Content\img\home.png" />
+    <Content Include="Themes\Socioboard\Content\img\icon_edit.png" />
+    <Content Include="Themes\Socioboard\Content\img\images.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\imgloader.gif" />
+    <Content Include="Themes\Socioboard\Content\img\instagram\comment_btn.png" />
+    <Content Include="Themes\Socioboard\Content\img\instagram\comment_btn_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\instagram\girls.png" />
+    <Content Include="Themes\Socioboard\Content\img\instagram\instalike.png" />
+    <Content Include="Themes\Socioboard\Content\img\instagram\like_btn.png" />
+    <Content Include="Themes\Socioboard\Content\img\instagram\like_btn_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\instagram\moment.png" />
+    <Content Include="Themes\Socioboard\Content\img\instagram_24X24.png" />
+    <Content Include="Themes\Socioboard\Content\img\instagram_24X24_grey.png" />
+    <Content Include="Themes\Socioboard\Content\img\invite.png" />
+    <Content Include="Themes\Socioboard\Content\img\ivon.ico" />
+    <Content Include="Themes\Socioboard\Content\img\lightbox-btn-close.gif" />
+    <Content Include="Themes\Socioboard\Content\img\like.png" />
+    <Content Include="Themes\Socioboard\Content\img\link.png" />
+    <Content Include="Themes\Socioboard\Content\img\linked_25X24.png" />
+    <Content Include="Themes\Socioboard\Content\img\link_icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\link_img.png" />
+    <Content Include="Themes\Socioboard\Content\img\loader.gif" />
+    <Content Include="Themes\Socioboard\Content\img\loadinfo.net.gif" />
+    <Content Include="Themes\Socioboard\Content\img\loading.gif" />
+    <Content Include="Themes\Socioboard\Content\img\lock.png" />
+    <Content Include="Themes\Socioboard\Content\img\login.png" />
+    <Content Include="Themes\Socioboard\Content\img\Login\input_box.png" />
+    <Content Include="Themes\Socioboard\Content\img\Login\lg_top_shadow.png" />
+    <Content Include="Themes\Socioboard\Content\img\Login\login_bg.png" />
+    <Content Include="Themes\Socioboard\Content\img\Login\login_body.png" />
+    <Content Include="Themes\Socioboard\Content\img\Login\login_btn.png" />
+    <Content Include="Themes\Socioboard\Content\img\Login\login_btn_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\Login\user_icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\Login\user_pwd.png" />
+    <Content Include="Themes\Socioboard\Content\img\login_bg.png" />
+    <Content Include="Themes\Socioboard\Content\img\login_btn.png" />
+    <Content Include="Themes\Socioboard\Content\img\logo-txt.png" />
+    <Content Include="Themes\Socioboard\Content\img\logo.png" />
+    <Content Include="Themes\Socioboard\Content\img\logout_woo.png" />
+    <Content Include="Themes\Socioboard\Content\img\male-icon.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\manplus.png" />
+    <Content Include="Themes\Socioboard\Content\img\menu_select_img.png" />
+    <Content Include="Themes\Socioboard\Content\img\msg.png" />
+    <Content Include="Themes\Socioboard\Content\img\msg\correct.png" />
+    <Content Include="Themes\Socioboard\Content\img\msg\network_click.png" />
+    <Content Include="Themes\Socioboard\Content\img\msg\network_fb_icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\msg\network_linked.png" />
+    <Content Include="Themes\Socioboard\Content\img\msg\Network_non_click.png" />
+    <Content Include="Themes\Socioboard\Content\img\msg\network_plus.png" />
+    <Content Include="Themes\Socioboard\Content\img\msg\Network_search.png" />
+    <Content Include="Themes\Socioboard\Content\img\msg\network_twt.png" />
+    <Content Include="Themes\Socioboard\Content\img\msg\sidebar.png" />
+    <Content Include="Themes\Socioboard\Content\img\msg\wrong.png" />
+    <Content Include="Themes\Socioboard\Content\img\norecord.png" />
+    <Content Include="Themes\Socioboard\Content\img\normal.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\no_image_found.png" />
+    <Content Include="Themes\Socioboard\Content\img\p-m-logo.png" />
+    <Content Include="Themes\Socioboard\Content\img\paid-icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\pat_leftnavli.png" />
+    <Content Include="Themes\Socioboard\Content\img\payment-info-butn.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\paypal-butn.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\personal-icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\picture.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\pin.png" />
+    <Content Include="Themes\Socioboard\Content\img\plus.png" />
+    <Content Include="Themes\Socioboard\Content\img\price-head-bg.png" />
+    <Content Include="Themes\Socioboard\Content\img\price-list-bg.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\pricing-bg.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\pricing.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\profileloader.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\profile_loader.gif" />
+    <Content Include="Themes\Socioboard\Content\img\prompt_bg.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\prompt_header.gif" />
+    <Content Include="Themes\Socioboard\Content\img\ps\select.png" />
+    <Content Include="Themes\Socioboard\Content\img\publish.png" />
+    <Content Include="Themes\Socioboard\Content\img\quoe.png" />
+    <Content Include="Themes\Socioboard\Content\img\rays.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\red_Close.png" />
+    <Content Include="Themes\Socioboard\Content\img\register.png" />
+    <Content Include="Themes\Socioboard\Content\img\reg\reg_bot.png" />
+    <Content Include="Themes\Socioboard\Content\img\reg\reg_header.png" />
+    <Content Include="Themes\Socioboard\Content\img\reg\reg_mid.png" />
+    <Content Include="Themes\Socioboard\Content\img\reg\sign_up_btn.png" />
+    <Content Include="Themes\Socioboard\Content\img\reg\sign_up_btn_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\replay.png" />
+    <Content Include="Themes\Socioboard\Content\img\reports.png" />
+    <Content Include="Themes\Socioboard\Content\img\re_nw_banner.png" />
+    <Content Include="Themes\Socioboard\Content\img\re_store_logos.png" />
+    <Content Include="Themes\Socioboard\Content\img\rusian.png" />
+    <Content Include="Themes\Socioboard\Content\img\save.png" />
+    <Content Include="Themes\Socioboard\Content\img\save_btn.png" />
+    <Content Include="Themes\Socioboard\Content\img\schedule.png" />
+    <Content Include="Themes\Socioboard\Content\img\Search.png" />
+    <Content Include="Themes\Socioboard\Content\img\search_box.png" />
+    <Content Include="Themes\Socioboard\Content\img\selectarrow.png" />
+    <Content Include="Themes\Socioboard\Content\img\sendbtn.png" />
+    <Content Include="Themes\Socioboard\Content\img\setting.png" />
+    <Content Include="Themes\Socioboard\Content\img\shadow.png" />
+    <Content Include="Themes\Socioboard\Content\img\sh\arrow-down.png" />
+    <Content Include="Themes\Socioboard\Content\img\sh\attach_photo.png" />
+    <Content Include="Themes\Socioboard\Content\img\sh\bg_modal_dialog-LIGHTER1.png" />
+    <Content Include="Themes\Socioboard\Content\img\sh\cross.png" />
+    <Content Include="Themes\Socioboard\Content\img\sh\draft.png" />
+    <Content Include="Themes\Socioboard\Content\img\sh\filedanagha20mamwoosuit.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\sh\quee.png" />
+    <Content Include="Themes\Socioboard\Content\img\sh\shedule_msg.png" />
+    <Content Include="Themes\Socioboard\Content\img\small_loader.gif" />
+    <Content Include="Themes\Socioboard\Content\img\Social-Crowd.png" />
+    <Content Include="Themes\Socioboard\Content\img\Social-Crowd1.png" />
+    <Content Include="Themes\Socioboard\Content\img\social_media.gif" />
+    <Content Include="Themes\Socioboard\Content\img\sprite-main-142-pdf-4.png" />
+    <Content Include="Themes\Socioboard\Content\img\sprite-main-162.png" />
+    <Content Include="Themes\Socioboard\Content\img\sprite.gif" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\+.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\=.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\advanced_scheduling_publishing.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\Alexey-V-Abramov1.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\all_social.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\amazonaws.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\analyze1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\analyze2.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\analyze3.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\anim-left-pin.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\anim-outline-1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\anim-outline-2.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\anim-outline-3.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\anim-right-pin.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\arrow.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\arrow_top.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\attechphoto.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\attechphoto_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\azure.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\banner-1.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\banner-2.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\bullet-1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\competitors.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\constant_real.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\country_tag.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\detail.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\disocvery_page.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\disocvery_page1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\Download-icon-150x150.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\Download-icon-green-150x150.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\effective_and_effi.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\enterprise.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\facebook.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\facebook_32.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\fb-icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\feeds_page.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\feeds_page1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\foot-logo.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\foot-logo1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\gift.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\gmail.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\gplus.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\home_page.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\home_page1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\home_page123.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\hotmail.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\img-1.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\img-1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\industry_tag.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\language_tag.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\link.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\linkedin_32.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\login-bg.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\logo-bg.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\logo-txt.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\logo-txt1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\message_page.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\message_page1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\mon1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\mon2.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\mon3.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\msocial_logo.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\nammer-2.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\naresh.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\nav-icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\Newloader.gif" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\people.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\phone-banner-new1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\phone-banner.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\pixel.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\prompt_feeds.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\publishing_page.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\publishing_page1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\reach.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\reason-head.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\report.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\report1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\report2.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\report3.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\report4.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\reports.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\reports1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\secure-icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\sentiment.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\Sheebani-Chavan.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\shibu1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\signup-butn.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\slidegraph.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\smart_inbox.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\socialpour_logo.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\socialscoup_logo.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\social_crm.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\source_tag.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\sumit-sir-460x460-ver-5.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\s_facebook.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\s_googleplus.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\s_linkedin.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\s_twitter.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\team_coll.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\tiger.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\tiger_1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\trail-butn.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\trans.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\trial-butn.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\twitter.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\twitter_1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\twitter_32.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\unique_social_discovery.png" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\verify-icon.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\ssp\yahoomail.png" />
+    <Content Include="Themes\Socioboard\Content\img\submit_bg.gif" />
+    <Content Include="Themes\Socioboard\Content\img\submit_btn.png" />
+    <Content Include="Themes\Socioboard\Content\img\submit_hover_bg.gif" />
+    <Content Include="Themes\Socioboard\Content\img\success_bg.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\success_header.gif" />
+    <Content Include="Themes\Socioboard\Content\img\sun.jpeg" />
+    <Content Include="Themes\Socioboard\Content\img\support.png" />
+    <Content Include="Themes\Socioboard\Content\img\task\radio.png" />
+    <Content Include="Themes\Socioboard\Content\img\task\selected_radio.png" />
+    <Content Include="Themes\Socioboard\Content\img\task\submit_bg.gif" />
+    <Content Include="Themes\Socioboard\Content\img\task\submit_hover_bg.gif" />
+    <Content Include="Themes\Socioboard\Content\img\task\task_pin.png" />
+    <Content Include="Themes\Socioboard\Content\img\task_pin.png" />
+    <Content Include="Themes\Socioboard\Content\img\TM\fb_tm.png" />
+    <Content Include="Themes\Socioboard\Content\img\TM\ga_bg.png" />
+    <Content Include="Themes\Socioboard\Content\img\TM\ga_tm.png" />
+    <Content Include="Themes\Socioboard\Content\img\TM\profile.png" />
+    <Content Include="Themes\Socioboard\Content\img\TM\profile_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\TM\team.png" />
+    <Content Include="Themes\Socioboard\Content\img\TM\team_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\TM\twt_cin.png" />
+    <Content Include="Themes\Socioboard\Content\img\top-block-light.png" />
+    <Content Include="Themes\Socioboard\Content\img\top-blue.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\top-blue2.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\top_bg.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\trail-butn.png" />
+    <Content Include="Themes\Socioboard\Content\img\trial-butn-1.png" />
+    <Content Include="Themes\Socioboard\Content\img\trial-butn-2.png" />
+    <Content Include="Themes\Socioboard\Content\img\trial-butn-3.png" />
+    <Content Include="Themes\Socioboard\Content\img\tumblr.png" />
+    <Content Include="Themes\Socioboard\Content\img\twiter_24X24.png" />
+    <Content Include="Themes\Socioboard\Content\img\twitter.png" />
+    <Content Include="Themes\Socioboard\Content\img\twitter_icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\twitter_icon_hover.png" />
+    <Content Include="Themes\Socioboard\Content\img\twticon.png" />
+    <Content Include="Themes\Socioboard\Content\img\twt_icon.png" />
+    <Content Include="Themes\Socioboard\Content\img\twt_img.png" />
+    <Content Include="Themes\Socioboard\Content\img\uncheck_click.png" />
+    <Content Include="Themes\Socioboard\Content\img\under_sspro_logo.png" />
+    <Content Include="Themes\Socioboard\Content\img\upload\alone_in_sea-1280x720.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\upload\Chrysanthemum.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\upload\Dark-Black-HD-Wallpapers-for-Desktop-1920x1080-5.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\upload\Jellyfish.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\upload\Koala.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\upload\Senzune - Yinean - Zenia.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\url.png" />
+    <Content Include="Themes\Socioboard\Content\img\user.png" />
+    <Content Include="Themes\Socioboard\Content\img\usergrey.png" />
+    <Content Include="Themes\Socioboard\Content\img\usersetting.png" />
+    <Content Include="Themes\Socioboard\Content\img\user_img\29620_527569927261850_482872866_n.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\user_img\Chrysanthemum.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\user_img\dealovi.png" />
+    <Content Include="Themes\Socioboard\Content\img\user_img\Desert.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\user_img\Hydrangeas.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\user_img\icon_edit.png" />
+    <Content Include="Themes\Socioboard\Content\img\user_img\Jellyfish.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\user_img\Lighthouse.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\user_img\The-best-top-desktop-hd-dark-black-wallpapers-dark-black-wallpaper-dark-background-dark-wallpaper-24.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\video.png" />
+    <Content Include="Themes\Socioboard\Content\img\video_run.png" />
+    <Content Include="Themes\Socioboard\Content\img\view-history-butn.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\warning_bg.jpg" />
+    <Content Include="Themes\Socioboard\Content\img\warning_header.gif" />
+    <Content Include="Themes\Socioboard\Content\img\white_x.png" />
+    <Content Include="Themes\Socioboard\Content\img\woo-bubble.png" />
+    <Content Include="Themes\Socioboard\Content\img\woosuite.png" />
+    <Content Include="Themes\Socioboard\Content\img\woosuite2.png" />
+    <Content Include="Themes\Socioboard\Content\img\woosuite_black.png" />
+    <Content Include="Themes\Socioboard\Content\img\woosuite_logo.png" />
+    <Content Include="Themes\Socioboard\Content\img\woosuite_logo1.png" />
+    <Content Include="Themes\Socioboard\Content\img\ws_bg.png" />
+    <Content Include="Themes\Socioboard\Content\img\ws_top_bg.png" />
+    <Content Include="Themes\Socioboard\Content\img\youtub.png" />
+    <Content Include="Themes\Socioboard\Content\img\youtube.png" />
+    <Content Include="Themes\Socioboard\Content\js\admin.js" />
+    <Content Include="Themes\Socioboard\Content\js\ajaxfileupload.js" />
+    <Content Include="Themes\Socioboard\Content\js\alertify.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\blocksit.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\bootstrap-collapse.js" />
+    <Content Include="Themes\Socioboard\Content\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\bootstrap.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\canvasjs.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\Chart.js" />
+    <Content Include="Themes\Socioboard\Content\js\clickDesk.js" />
+    <Content Include="Themes\Socioboard\Content\js\dialog_box.js" />
+    <Content Include="Themes\Socioboard\Content\js\DT_bootstrap.js" />
+    <Content Include="Themes\Socioboard\Content\js\easyResponsiveTabs.js" />
+    <Content Include="Themes\Socioboard\Content\js\excanvas.js" />
+    <Content Include="Themes\Socioboard\Content\js\exporting.js" />
+    <Content Include="Themes\Socioboard\Content\js\Feeds.js" />
+    <Content Include="Themes\Socioboard\Content\js\googleanalytics.js" />
+    <Content Include="Themes\Socioboard\Content\js\graph-admin-panel.js" />
+    <Content Include="Themes\Socioboard\Content\js\graph-scripts.js" />
+    <Content Include="Themes\Socioboard\Content\js\group.js" />
+    <Content Include="Themes\Socioboard\Content\js\Helper.js" />
+    <Content Include="Themes\Socioboard\Content\js\highcharts.js" />
+    <Content Include="Themes\Socioboard\Content\js\Home.js" />
+    <Content Include="Themes\Socioboard\Content\js\html5shiv.js" />
+    <Content Include="Themes\Socioboard\Content\js\InviteTeamMember.js" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\css\jquery.lightbox-0.5.css" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\images\lightbox-blank.gif" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\images\lightbox-btn-close.gif" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\images\lightbox-btn-next.gif" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\images\lightbox-btn-prev.gif" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\images\lightbox-ico-loading.gif" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\images\popup_cls.png" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\images\upload.png" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\images\video_popup_bottom_bg.png" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\images\video_popup_mid_bg.png" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\images\video_popup_top_bg.png" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\js\greybox.js" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\js\jquery.js" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\js\jquery.lightbox-0.5.js" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\js\jquery.lightbox-0.5.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\js\jquery.lightbox-0.5.pack.js" />
+    <Content Include="Themes\Socioboard\Content\js\jlitebox\js\popup.js" />
+    <None Include="Themes\Socioboard\Content\js\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery-1.4.1.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery-1.4.1.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery-1.6.3.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery-1.7.2.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery-1.9.1.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery-2.0.1.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery-latest.pack.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.ba-resize.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.bpopup-0.9.3.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.bpopup.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.cookie.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.cslider.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.dataTables.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.dataTables.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.dd.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.easing.1.3.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.fileupload.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.iframe-transport.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.jscroll.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.jscroll.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.knob.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.lazyscrollloading-src.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.lightbox-0.5.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.magnific-popup.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.ptTimeSelect.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.session.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.session1.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.smooth-scroll.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.sparkline.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.ui.core.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.ui.datepicker.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.ui.widget.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.uploadify-3.1.js" />
+    <Content Include="Themes\Socioboard\Content\js\jquery.uploadify-3.1.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\jsapi.js" />
+    <Content Include="Themes\Socioboard\Content\js\JSlogin.js" />
+    <Content Include="Themes\Socioboard\Content\js\login.js" />
+    <Content Include="Themes\Socioboard\Content\js\master.js" />
+    <Content Include="Themes\Socioboard\Content\js\md5.js" />
+    <Content Include="Themes\Socioboard\Content\js\Message.js" />
+    <Content Include="Themes\Socioboard\Content\js\modernizr.custom.28468.js" />
+    <Content Include="Themes\Socioboard\Content\js\modernizr.custom.63321.js" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-bg_diagonal-maze_20_6e4f1c_10x10.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-bg_diagonal-maze_40_000000_10x10.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-bg_fine-grain_10_eceadf_60x60.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-bg_fine-grain_10_f8f7f6_60x60.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-bg_fine-grain_15_d3c05a_60x60.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-bg_fine-grain_15_eceadf_60x60.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-bg_fine-grain_15_ffffff_60x60.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-bg_fine-grain_65_654b24_60x60.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-bg_fine-grain_68_b83400_60x60.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-icons_3572ac_256x240.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-icons_8c291d_256x240.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-icons_b83400_256x240.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-icons_fbdb93_256x240.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\mdp.css" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\pepper-ginder-custom.css" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\css\prettify.css" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\favicon.ico" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\img\sflogo.gif" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\img\valid-html401-blue.png" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\index.html" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\jquery-ui.multidatespicker.js" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\jquery.ui.datepicker.js" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\js\jquery-1.7.2.js" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\js\jquery.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\js\jquery.ui.core.js" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\js\jquery.ui.datepicker-es.js" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\js\jquery.ui.datepicker.js" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\js\lang-css.js" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\js\prettify.js" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\mdp-icon.png" />
+    <Content Include="Themes\Socioboard\Content\js\oauth.js" />
+    <Content Include="Themes\Socioboard\Content\js\oauthFunctions.js" />
+    <Content Include="Themes\Socioboard\Content\js\parallax.js" />
+    <Content Include="Themes\Socioboard\Content\js\pttimepickerjs\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="Themes\Socioboard\Content\js\pttimepickerjs\jquery.ptTimeSelect.css" />
+    <Content Include="Themes\Socioboard\Content\js\pttimepickerjs\jquery.ptTimeSelect.js" />
+    <Content Include="Themes\Socioboard\Content\js\publishing.js" />
+    <Content Include="Themes\Socioboard\Content\js\reloadfbgraph.js" />
+    <Content Include="Themes\Socioboard\Content\js\reloadtwtgraph.js" />
+    <Content Include="Themes\Socioboard\Content\js\RGraph.bar.js" />
+    <Content Include="Themes\Socioboard\Content\js\RGraph.common.core.js" />
+    <Content Include="Themes\Socioboard\Content\js\RGraph.common.key.js" />
+    <Content Include="Themes\Socioboard\Content\js\scripting.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\sha1.js" />
+    <Content Include="Themes\Socioboard\Content\js\SimplePopup.js" />
+    <Content Include="Themes\Socioboard\Content\js\SpryAccordion.js" />
+    <Content Include="Themes\Socioboard\Content\js\superbox\jquery.superbox.css" />
+    <Content Include="Themes\Socioboard\Content\js\superbox\jquery.superbox.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\GPL-LICENSE.txt" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\i18n.html" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-cs.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-de.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-es.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-fr.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-hr.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-it.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-ja.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-nl.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-pl.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-pt-BR.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-sl.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-sv.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\i18n\jquery.ui.timepicker-tr.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\jquery-1.9.0.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\jquery.ui.core.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\jquery.ui.position.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\jquery.ui.tabs.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\jquery.ui.widget.min.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\include\ui-1.10.0\ui-lightness\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\index.html" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\jquery.ui.timepicker.css" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\jquery.ui.timepicker.js" />
+    <Content Include="Themes\Socioboard\Content\js\timepicer\MIT-LICENSE.txt" />
+    <Content Include="Themes\Socioboard\Content\js\tooltip\main.js" />
+    <Content Include="Themes\Socioboard\Content\js\tooltip\zebra_tooltips.js" />
+    <Content Include="Themes\Socioboard\Content\js\uploadify.css" />
+    <Content Include="Themes\Socioboard\Content\js\uploadify.swf" />
+    <Content Include="Themes\Socioboard\Content\js\UsersAndGroups.js" />
+    <Content Include="Themes\Socioboard\Content\js\zoom.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Themes\Socioboard\Views\_ViewStart.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Account\Login.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Account\Manage.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Account\Register.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Home\About.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Home\Contact.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Home\Index.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Shared\_Layout.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Shared\Error.cshtml" />
+    <Content Include="Themes\Socioboard\Views\Web.config" />
+    <Content Include="Themes\Socioboard\Views\Shared\_Socialsuite.cshtml" />
+    <Content Include="Themes\Socioboard\Content\js\multidatepicker\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Themes\Socialscoup\Content\css\" />
+    <Folder Include="Themes\Socialscoup\Content\img\" />
+    <Folder Include="Themes\Socialscoup\Content\script\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9821/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
